@@ -17,7 +17,7 @@ const bigNumber = 3456798576893n
 
 const userName = "Pawan"
 
-// Non Primitive (Reference)
+// Non-Primitive (Reference) =>(call by reference)
 //  Array, Objects, Functions
 
 
@@ -33,16 +33,42 @@ const myFunction = function(){
     
 }
 
-console.log(typeof score);  //number
-console.log(typeof socreValue);  //number
-console.log(typeof isLoggedIn);  //boolean
-console.log(typeof outsideTemp);   //object
-console.log(typeof userEamil);   //undefined
-console.log(typeof id);  //symbol
-console.log(typeof bigNumber);  //bigint
-console.log(typeof userName);   //string
-console.log(typeof heros);   //object
-console.log(typeof myobj);  //object
-console.log(typeof myFunction);  //function
+// console.log(typeof score);  //number
+// console.log(typeof socreValue);  //number
+// console.log(typeof isLoggedIn);  //boolean
+// console.log(typeof outsideTemp);   //object
+// console.log(typeof userEamil);   //undefined
+// console.log(typeof id);  //symbol
+// console.log(typeof bigNumber);  //bigint
+// console.log(typeof userName);   //string
+// console.log(typeof heros);   //object
+// console.log(typeof myobj);  //object
+// console.log(typeof myFunction);  //function
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// ****************************************************
+
+// Stack (Primitive) =>(get copy), Heap (Non-Primitive) =>(get reference)
+
+let myYoutubeName = "UnderstandWorld24"
+let anotherNmae = myYoutubeName
+anotherNmae = "UnderstandWorld"
+
+console.log(myYoutubeName);
+console.log(anotherNmae);
+
+let userOne = {
+    email : "pawan@google.com",
+    name: "Pawan"
+}
+
+let userTwo = userOne
+userTwo.name = "Pawan Tiwari"
+console.log(userOne);
+console.log(userTwo)
+
+
+
