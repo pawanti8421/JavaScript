@@ -50,10 +50,26 @@ const users =[
 
 ]
 
-console.log(users[1].id);
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); //outputs data type is array
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty('isLogged'));
+// console.log(users[1].id);
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); //outputs data type is array
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('isLogged'));
 
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// const {courseInstructor} = course
+const {courseInstructor: insturctor} = course //destucture
+
+console.log(insturctor)
+
+// {
+//     name: "Pawan",
+//     coursename: "js in hindi",
+//     price: "free"
+// }
